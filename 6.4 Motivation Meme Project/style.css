@@ -8,6 +8,8 @@ div {
 img {
     width: 100%;
     border: 5px solid white;
+    height: 30em;
+    width: 50em;
 }
 
 html {
