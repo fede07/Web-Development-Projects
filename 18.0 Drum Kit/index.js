@@ -6,6 +6,7 @@ for (var i = 0; i < numOfDrumButtons; i++) {
 
         var buttonInnerHTML = this.innerHTML;
         makeSound(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     });
 }
 
@@ -47,3 +48,12 @@ function makeSound(key) {
             console.log("Invalid key pressed");
     }
 };
+
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+
+    setTimeout(function() {
+        activeButton.classList.remove("pressed");
+    }, 100);
+}
